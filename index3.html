@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Declare a function that takes number 2,3,5 and replaces them if they are divisible by them with yu, gi, oh
+        function convert(num1){
+        //Create an array that accepts the conversions temporarily
+            let inp = [];
+        //Use a for loop to iterate between 1 to the given number and return the necessary values 
+            for(let i = 1; i <= num1; i++){
+                if(i % 2 === 0 && i % 3 === 0 && i % 5 === 0){
+                    inp.push(("yu-gi-oh"));
+                }else if(i % 3 === 0 && i % 5 === 0){
+                    inp.push(("gi-oh"));
+                }else if(i % 2 === 0 && i % 5 === 0){
+                    inp.push(("yu-oh"));
+                }else if(i % 2 === 0 && i % 3 === 0){
+                    inp.push(("yu-gi"));
+                }else if(i % 2 === 0){
+                    inp.push(("yu"));
+                }else if(i % 3 === 0){
+                    inp.push(("gi"));
+                }else if(i % 5 === 0){
+                    inp.push(("oh"));
+                }else
+                    inp.push((i));
+                }
+                console.log(inp);
+                //Returning an array containing all numbers from 1 to the passed argument
+                return inp;
+        }
+//Call function and pass 100 as an argument
+convert(100);
+//Call function and pass a random number of your choice as an argument
+convert(9);
+    </script>
+</body>
+</html>
